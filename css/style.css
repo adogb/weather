@@ -1,0 +1,46 @@
+* {
+	margin:0;
+	padding:0;
+	box-sizing: border-box; /*to make sure padding and border are included in the total width of the elements */
+}
+
+h1{
+    margin:0;
+    padding-top:1em;
+}
+body {
+    font-family: 'Open Sans', sans-serif;
+	height:100%;
+}
+
+.container {
+    width: 50rem;
+    background: rgba(255, 255, 255, .5);
+    padding: 2em;
+    border-radius: 15px;
+}
+
+footer {
+	position:relative;
+	width:100%;
+	background-color: black;
+	height: 3em;
+	padding:10px 15px 0px 18px;	
+}
+
+footer .left {
+	float: left;
+}
+
+footer .right {
+	float: right;
+}
+
+footer i {
+	position: relative;
+	top:-3px;
+}
+
+#twitter {
+	margin-right:15px;
+}
