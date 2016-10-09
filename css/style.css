@@ -19,6 +19,35 @@ body {
     padding: 2em;
     border-radius: 15px;
 }
+.clearfix:after { /*used to avoid div with floated elements in it to collapse to 0 px height */
+   content: " ";
+   display: block; 
+   height: 0; 
+   clear: both;
+}
+
+#weather {
+	height: 30rem;
+}
+
+#location{
+	font-size: 5rem;
+}
+
+#weatherDetails {
+	margin:0 auto;
+	width:10em;
+	font-size:3.5rem;
+}
+#mainTemp {
+	float: left;
+	padding:1em;
+}
+
+#windSpeed{
+	float: right;
+	padding:1em;
+}
 
 footer {
 	position:relative;
