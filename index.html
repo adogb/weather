@@ -16,19 +16,22 @@
 		<main>
 			<h1 class="text-center">I wish I lived in...</h1>
 			<div class="container">
+				<div id="weather">
+					<div id="locationResult">
+						<p id="location" class="text-center"></p>
+						<p id="coord" class="text-center"></p>
+					</div>
+					<div class="clearfix" id="weatherDetails">
+						<div id="mainTemp"></div>
+						<div id="windSpeed"></div>
+					</div>
+				</div>
 				<div class="input-group" id="searchBar">
 					<input type="text" class="form-control" id="locationInput" placeholder="Enter a location" aria-label="location_search">
 					<span class="input-group-btn" id="basic-addon1"><button class="btn btn-default" type="button"><i class="fa fa-search fa-lg" aria-hidden="true"></i></button></span>
 				</div>
-				<div id="locationResult">
-					<p id="location" class="text-center"></p>
-					<p id="coord" class="text-center"></p>
-				</div>
-				<div id="weatherDetails">
-					<div id="temperature"></div>
-					<div id="windSpeed"></div>
-				</div>
-				<p id="dateTime">Last updated: </p>
+				<button type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off">°C</button>
+				<p class="text-center" id="dateTime"></p>
 			</div>
 		</main>
 		<footer id="footer">
