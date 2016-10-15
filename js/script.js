@@ -7,6 +7,12 @@ $(document).ready(function(){
 	});
     
     $("#searchBar button").click(getWeather);
+    /*and to handle Enter key press - some browsers use 'keyCode', some use 'which' - 13 is keyCode for Enter */
+    $("#locationInput").keydown(function(event){
+        if ((event.keyCode || event.which)==13){
+            getWeather();
+        }
+    });
         
     function getWeather(){
         var userLocation = $('#locationInput').val();
@@ -14,8 +20,8 @@ $(document).ready(function(){
         $.getJSON(userUrl, function(result){
             $("#location").text(result.name+', '+result.sys.country);
             $("#coord").text("Lon: "+result.coord.lon+" | Lat: "+result.coord.lat);
-            $("#mainTemp").text(Math.round(result.main.temp)+"°C");
-            $("#windSpeed").text(result.wind.speed+"m/s");
+            $("#mainTemp").html(Math.round(result.main.temp)+"<span class='greyText'>°C</span>");
+            $("#windSpeed").html(result.wind.speed+"<span class='greyText' style='font-size:2.5rem'>m/s</span>");
             $("#dateTime").text("Last updated: "+result.dt);
         });
     };

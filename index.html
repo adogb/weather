@@ -26,11 +26,15 @@
 						<div id="windSpeed"></div>
 					</div>
 				</div>
+				<label id="unitSwitch"> <!--here label is used to be able to click the checkbox even though it is hidden-->
+					<input type="checkbox" />
+					<div class="slider"></div>
+					<p><span>°C</span><span>°F</span></p>
+				</label>
 				<div class="input-group" id="searchBar">
-					<input type="text" class="form-control" id="locationInput" placeholder="Enter a location" aria-label="location_search">
+					<input type="text" class="form-control" id="locationInput" placeholder="Choose a location!" aria-label="location_search">
 					<span class="input-group-btn" id="basic-addon1"><button class="btn btn-default" type="button"><i class="fa fa-search fa-lg" aria-hidden="true"></i></button></span>
 				</div>
-				<button type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off">°C</button>
 				<p class="text-center" id="dateTime"></p>
 			</div>
 		</main>
