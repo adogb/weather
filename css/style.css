@@ -37,17 +37,20 @@ body {
 
 #weatherDetails {
 	margin:0 auto;
-	width:10em;
 	font-size:3.5rem;
+	padding: 0.8em 0;
 }
 #mainTemp {
 	float: left;
-	padding:1em;
+    width: 50%;
+    text-align: right;
+    padding-right: 0.8em;
 }
 
 #windSpeed{
 	float: right;
-	padding:1em;
+    width: 50%;
+    padding-left: 0.8em;
 }
 .greyText{
 	color:#aaa;
@@ -56,14 +59,15 @@ body {
 	display: none;
 }
 #unitSwitch{
-	display: inline-block;
 	width:60px;
 	height:30px;
 	background-color: rgba(220,220,220,0.5);
 	border-radius:0.4rem;;
 	position:relative;
-	right: 0px;
-	left:0px;
+	/*all lines below are to be able to center it*/
+	display: block;
+	margin-left: auto;
+	margin-right: auto; 
 }
 .slider{
 	background-color: #EE848E;
@@ -102,6 +106,10 @@ input:checked + .slider{
 }
 #unitSwitch span:last-child {
 	left:50%;
+}
+
+#searchBar {
+	padding:1em 4em 0;
 }
 footer {
 	position:relative;
