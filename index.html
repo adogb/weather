@@ -2,33 +2,41 @@
 <html lang="en">
 
 <head>
-	<title>I wish... | Weather App by Audrey Dogbeh</title>
+	<title>Let's travel to... | by Audrey Dogbeh</title>
 	<meta charset="utf-8">
 	<!--[if lt IE 9]>
 			<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,400' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Amatic+SC' rel='stylesheet' type='text/css'>
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1"
 		crossorigin="anonymous">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
 		crossorigin="anonymous">
+	<link href="css/weather-icons.min.css" rel="stylesheet">
+	<link href="css/weather-icons-wind.min.css" rel="stylesheet">
 	<link href="css/style.css" rel="stylesheet">
 </head>
 
 <body>
 	<main>
-		<h1 class="text-center">I wish I lived in...</h1>
-		<div class="container">
+		<h1 class="text-center">Let's travel to...</h1>
+		<div class="mainContainer">
 			<div id="weather">
 				<div id="locationResult">
 					<p id="location" class="text-center"></p>
 					<p id="coord" class="text-center"></p>
 				</div>
 				<div class="clearfix" id="weatherDetails">
-					<div id="mainTemp"></div>
-					<div id="windSpeed"></div>
+					<div class="text-right" id="weatherIcon"><i class=""></i></div>
+					<div class="text-left" id="right">
+						<div id="mainTemp"></div>
+						<div id="windSpeed"></div>
+					</div>
 				</div>
+				<p class="text-center" id="desc"></p>
+				
 			</div>
 
 			<div class="input-group" id="searchBar">
