@@ -1,24 +1,41 @@
 * {
 	margin:0;
 	padding:0;
-	box-sizing: border-box; /*to make sure padding and border are included in the total width of the elements */
+	box-sizing: border-box; /*to make sure padding and border are included in the total width/height of the elements */
+}
+
+html {
+	height:100%;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+	min-height: 100%;
+	position: relative;
+	/*background-color: grey;*/
+}
+main {
+	padding-bottom: 4.2rem; 
+}
+
+p {
+	margin:0;
 }
 
 h1{
-    margin:0;
-    padding-top:1em;
-}
-body {
-    font-family: 'Open Sans', sans-serif;
-	height:100%;
-	
+   	margin: 0;
+    padding-top: 0.5em;
+    margin-bottom: 0.3em;
+    font-size: 4.5rem;
+    font-family: 'Amatic SC', cursive;
 }
 
-.container {
-    width: 50rem;
+.mainContainer {
+    max-width: 50rem;
     background: rgba(255, 255, 255, .5);
-    padding: 2em;
+    padding: 0 2.5rem 1rem;
     border-radius: 15px;
+	margin: 0 auto 2rem;
 }
 .clearfix:after { /*used to avoid div with floated elements in it to collapse to 0 px height */
    content: " ";
@@ -27,34 +44,54 @@ body {
    clear: both;
 }
 
-#weather {
-	height: 30rem;
-}
-
 #location{
-	font-size: 5rem;
+	font-size: 4.5rem;
 }
 
 #weatherDetails {
 	margin:0 auto;
-	font-size:3.5rem;
-	padding: 0.8em 0;
+	padding: 1em 0;
+	display: flex;
+	align-items: center;
 }
-#mainTemp {
+
+#weatherIcon {
 	float: left;
     width: 50%;
-    text-align: right;
-    padding-right: 0.8em;
+	font-size: 8rem;
+	padding-right:2.1rem;
+}
+
+#mainTemp {
+	font-size:4rem;
 }
 
 #windSpeed{
-	float: right;
-    width: 50%;
-    padding-left: 0.8em;
+	font-size:1.8rem;
+	display: flex;
+	align-items: center;
 }
+#windSpeed i {
+	padding-right: 0.4em;
+	padding-left: 0.4em;
+	font-size: 1.5em;
+}
+#right {
+	float:right;
+	width:50%;
+	padding-left:2.1rem;
+}
+
 .greyText{
 	color:#aaa;
 }
+
+#desc {
+	font-weight: 600;
+	font-size: 1.8rem;
+	margin-bottom: 2.8rem;
+}
+
 #unitSwitch input{
 	display: none;
 }
@@ -62,12 +99,11 @@ body {
 	width:60px;
 	height:30px;
 	background-color: rgba(220,220,220,0.5);
-	border-radius:0.4rem;;
+	border-radius:0.4rem;
+	border: 1px solid #ddd;
 	position:relative;
-	/*all lines below are to be able to center it*/
-	display: block;
-	margin-left: auto;
-	margin-right: auto; 
+	display: block; /* to use margin */
+	margin: 0 auto 2rem;
 }
 .slider{
 	background-color: #EE848E;
@@ -109,14 +145,18 @@ input:checked + .slider{
 }
 
 #searchBar {
-	padding:1em 4em 0;
+	max-width:30rem;
+	margin:0 auto 1rem;
 }
+
 footer {
-	position:relative;
+	position: absolute;
 	width:100%;
+	height: 4.2rem;
+	bottom: 0;
+	left: 0;
 	background-color: black;
-	height: 3em;
-	padding:10px 15px 0px 18px;	
+	padding:1rem 1.5rem 0 1.8rem;	
 }
 
 footer .left {
