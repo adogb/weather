@@ -33,7 +33,7 @@ h1{
 .mainContainer {
     max-width: 50rem;
     background: rgba(255, 255, 255, .5);
-    padding: 0 2.5rem 1rem;
+    padding: 0 2.5rem 0;
     border-radius: 15px;
 	margin: 0 auto 2rem;
 }
@@ -45,7 +45,7 @@ h1{
 }
 
 #location{
-	font-size: 4.5rem;
+	font-size: 3.8rem;
 }
 
 #weatherDetails {
