@@ -48,7 +48,7 @@ $(document).ready(function(){
             /* adjusting sunrise/sunset days to take into account timezones: sunrise/sunset data given by openweathermap are related
             to the current day in UTC timezone, so need adjusting by +/- 1 day i.e. 84600 seconds
             if a timezone has not yet reached / has already passed that day */
-            //console.log(result.weather[0].icon, updateTime, sunrise, sunset);
+            //console.log(result.weather[0].icon, result.weather[0].id, updateTime, sunrise, sunset);
             if (updateTime<sunrise && updateTime<sunset-84600){
                 sunrise=sunrise-84600;
                 sunset=sunset-84600;
@@ -56,6 +56,7 @@ $(document).ready(function(){
                 sunrise=sunrise+84600;
                 sunset=sunset+84600;
             }
+            //console.log(sunrise, sunset);
             /*normally compare time to sunrise / sunset to define day or night weather icon */
             if (updateTime<sunrise || updateTime>sunset){
                 icon='night';
